@@ -6,6 +6,8 @@ This repository documents the public-safe architecture of those systems.
 
 These systems support the leaderboards, participation tracking and community engagement outputs that users see on Amy's platform.
 
+The goal is to surface useful community participation, make contribution visible and support fairer reward and progress systems.
+
 ## What this system does
 
 Amy's engagement automation pipeline processes community participation signals through several stages:
@@ -13,7 +15,7 @@ Amy's engagement automation pipeline processes community participation signals t
 1. **Curated activity sources** — structured inputs from selected public channels and community-submitted links.
 2. **Activity qualification** — capture and structuring of public engagement signals such as posts, comments and interactions.
 3. **Quality controls** — deduplication, spam filtering, handle repair and rolling time windows to support fairer outputs.
-4. **Graded scoring** — caps, weighting and quality adjustments so outputs reflect structured participation rather than raw volume.
+4. **Structured scoring** — caps, weighting and quality adjustments so outputs reflect structured participation rather than raw volume.
 5. **Leaderboard construction** — deterministic ranking with public and internal review layers.
 6. **Automated publishing** — outputs delivered to structured destinations for display, review and downstream use.
 7. **Daily run reporting** — each run produces a summary of what was collected, processed, published, skipped or failed.
@@ -29,7 +31,7 @@ Amy's engagement automation pipeline processes community participation signals t
 
 ### Separate collection from judgement
 
-Raw activity capture is separated from graded scoring. The system does not publish raw engagement counts directly; it passes data through quality controls before outputs are built.
+Raw activity capture is separated from structured scoring. The system does not publish raw engagement counts directly; it passes data through quality controls before outputs are built.
 
 ### Rolling windows, not lifetime accumulation
 
